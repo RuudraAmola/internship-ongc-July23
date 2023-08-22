@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EPINET User Account Request</title>
+    <link rel="stylesheet" href="form1.css">
+    
+</head>
+<body>
+    <img src="ONGC.png" width="125" height="115" align="left">
+    <form action="login.html">
+        <button type="submit">Log Out</button>
+    </form>
+    <form class="user-account-form" action="form-test.php" method="post" onsubmit="return validation()" id="contactForm">
+        <h2>EPINET User Account Creation Request</h2>
+        <div class="form-group">
+            <label>To:</label>
+            <div class="radio-options">
+                    <input type="radio" name="recipient" value="Site Data Manager" id="radio1">
+                    <span>Site Data Manager</span>
+                    <br>
+                    <input type="radio" name="recipient" value="Regional Data Manager" id="radio2">
+                    <span>Regional Data Manager</span>
+                    <br>
+                    <input type="radio" name="recipient" value="Head EPINET" id="radio3">
+                    <span>Head EPINET</span>
+            </div>
+            <!-- <span id="recp" class="text-danger font-weight-bold"> </span> -->
+        </div>
+        <div class="form-group">
+            <label> Kindly create a user account for access to (select the modules):</label>
+            <div class="module-checkboxes">
+                    <input type="checkbox" name="modules[]" value="Data Viewer" id="checkbox1">
+                    <span>Data Viewer (To access E&amp;P Data)</span>
+                    <br>
+                    <input type="checkbox" name="modules[]" value="GTO Viewer" id="checkbox2">
+                    <span>GTO Viewer (To access created GTO)</span>
+                    <br>
+                    <input type="checkbox" name="modules[]" value="Documents Download" id="checkbox3">
+                    <span>Documents Download</span>
+                    <br>
+                    <input type="checkbox" name="modules[]" value="DTM (Data Transfer Module)" id="checkbox4">
+                    <span>DTM (Data Transfer Module)</span>
+                    <br>
+                    <input type="checkbox" name="modules[]" value="Data Loader" id="checkbox5">
+                    <span>Data Loader (To load E&amp;P data: Domain Experts only)</span>
+                    <br>
+                    <input type="checkbox" name="modules[]" value="GTO Creator" id="checkbox6">
+                    <span>GTO Creator (To create GTO)</span>
+            </div>
+            <!-- <span id="module" class="text-danger font-weight-bold"> </span> -->
+        </div>
+        <div class="form-group">
+            <label for="purpose">Purpose:</label>
+            <textarea id="purpose" name="purpose" rows="4" style="resize: none;" placeholder="Enter the purpose" required></textarea>
+            <span id="prp" class="text-danger font-weight-bold"> </span>
+        </div>
+        <div class="form-group">
+            <label for="cpf">CPF No:</label>
+            <input type="text" id="cpf" name="cpf" required>
+            <span id="cpfno" class="text-danger font-weight-bold"> </span>
+        </div>
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <span id="username" class="text-danger font-weight-bold"> </span>
+        </div>
+        <div class="form-group">
+            <label for="designation">Designation:</label>
+            <input type="text" id="designation" name="designation" required>
+            <span id="desig" class="text-danger font-weight-bold"> </span>
+        </div>
+        <div class="form-group">
+            <label for="department">Department/Section:</label>
+            <input type="text" id="department" name="department" required>
+            <span id="dept" class="text-danger font-weight-bold"> </span>
+        </div>
+        <div class="form-group">
+            <label for="ip-address">IP Address from which EPINET Data will be accessed:</label>
+            <input type="text" id="ip-address" name="ip-address" required>
+            <span id="ipadd" class="text-danger font-weight-bold"> </span>
+        </div>
+        <div class="form-group">
+            <label for="signature">E-Signature of user (enter fullname in lower case without space):</label>
+            <input type="text" id="signature" name="signature" required>
+            <span id="esign" class="text-danger font-weight-bold"> </span>
+        </div>
+        <div class="form-group">
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+            <span id="applydate" class="text-danger font-weight-bold"> </span>
+        </div>
+        <div class="form-group">
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location" required>
+            <span id="loc" class="text-danger font-weight-bold"> </span>
+        </div>
+        <div class="form-group">
+            <label for="mobile">Mob. No.:</label>
+            <input type="tel" id="mobile" name="mobile" required>
+            <span id="mobnum" class="text-danger font-weight-bold"> </span>
+        </div>
+        <div class="form-group">
+            <label for="last-posting-location">Last Posting Location:</label>
+            <input type="text" id="last-posting-location" name="last-posting-location" required>
+            <span id="lastloc" class="text-danger font-weight-bold"> </span>
+        </div>
+        <div class="form-group">
+            <label for="recommendation">Recommendation:</label>
+            <textarea id="recommendation" name="recommendation" rows="4" style="resize: none;" placeholder="Enter the recommendation" required></textarea>
+            <span id="rcmd" class="text-danger font-weight-bold"> </span>
+        </div>
+        <div class="form-buttons">
+            <button type="reset">Reset</button>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+    <script src="form1.js"></script>
+</body>
+</html>

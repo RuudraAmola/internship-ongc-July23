@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login_style.css">
+    <link rel="stylesheet" href="boxicons/css/boxicons.css">
+    <title>Request Login Page</title>
+</head>
+
+<body>
+    <img src="ONGC.png" width="125" height="115" align="left">
+    <img src="ONGC.png" width="125" height="115" align="right">
+    <div class="box">
+        <div class="container">
+            <div class="top-header">
+                <header>Enter Credentials</header>
+            </div>
+            <form id="loginForm">
+                <div class="input-field">
+                    <input type="text" id="username" class="input" placeholder="Username" required>
+                    <i class="bx bx-user"></i>
+                </div>
+                <br>
+                <div class="input-field">
+                    <input type="password" id="password" class="input" placeholder="Password" required>
+                    <i class="bx bx-lock-alt"></i>
+                </div>
+                <br>
+                <div class="input-field">
+                    <input type="submit" class="submit" value="Login">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+<script type="module">
+    document.addEventListener('DOMContentLoaded', function () {
+    const loginForm = document.getElementById('loginForm');
+    loginForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+
+        const predefinedUsers = {
+            'user1': 'user1',
+            'ControllingOfficer': 'ControllingOfficer',
+            'HeadOfDept': 'HeadOfDept',
+            'DBAdmin': 'DBAdmin'
+        };
+
+        if (predefinedUsers.hasOwnProperty(username) && predefinedUsers[username] === password) {
+            alert('Login successful! Redirecting...');
+            
+            if (username==='ControllingOfficer'){
+                window.location.href = 'http://localhost/Intern proj logins/co.php';
+            }
+            else if (username==='HeadOfDept'){
+                window.location.href = 'http://localhost/Intern proj logins/hod.php';
+            }
+            else if (username==='DBAdmin'){
+                window.location.href = 'http://localhost/Intern proj logins/dba.php';
+            }
+            else{
+                window.location.href = 'http://localhost/Intern proj logins/form1.html';
+            }
+            
+        } else {
+            
+            alert('Invalid credentials! Please try again.');
+        }
+    });
+});
+
+</script>
+
+</html>
